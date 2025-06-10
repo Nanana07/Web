@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Alv Studios - Your Digital Growth Partner</title> 
+  <script src="https://cdn.tailwindcss.com"></script> 
+  <style>
+        /* Custom Tailwind Configuration for Branding Colors */
+        :root {
+            --color-primary-navy: #1A2E40; /* Deep Navy - for text, accents, footer */
+            --color-accent-gold: #B88A00; /* Gold from logo */
+            --color-light-bg: #F8F9FA; /* Very light gray for clean sections */
+            --color-white: #FFFFFF; /* Pure white for main backgrounds */
+        }
+        .bg-primary-navy { background-color: var(--color-primary-navy); }
+        .text-primary-navy { color: var(--color-primary-navy); }
+        .bg-accent-gold { background-color: var(--color-accent-gold); }
+        .text-accent-gold { color: var(--color-accent-gold); }
+        .border-accent-gold { border-color: var(--color-accent-gold); }
+        .bg-light-bg { background-color: var(--color-light-bg); }
+
+        /* Hero Background with brighter overlay */
+        .hero-background {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url('https://images.unsplash.com/photo-1510127022097-397a796e6255?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Replace with your desired hero image */
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Subtle gold border/shadow for interactive elements */
+        .card-hover-effect:hover {
+            box-shadow: 0 4px 20px rgba(184, 138, 0, 0.3); /* Softer gold shadow */
+            border-color: var(--color-accent-gold);
+        }
+        .button-hover-effect:hover {
+            box-shadow: 0 0 15px rgba(184, 138, 0, 0.6); /* Gold glow */
+        }
+
+        /* Custom styles for Chatbot button and container */
+        .chatbot-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000; /* Ensure it's on top of other content */
+        }
+        .chatbot-container {
+            position: fixed;
+            bottom: 90px; /* Adjust to be above the button */
+            right: 20px;
+            z-index: 999;
+            width: 350px; /* Fixed width for chatbox */
+            height: 450px; /* Fixed height for chatbox */
+            max-width: 90vw; /* Max width on small screens */
+            max-height: 80vh; /* Max height on small screens */
+            transition: all 0.3s ease-in-out;
+            transform: translateY(20px); /* Initial subtle offset for animation */
+            opacity: 0;
+            pointer-events: none; /* Make it unclickable when hidden */
+        }
+        .chatbot-container.active {
+            transform: translateY(0);
+            opacity: 1;
+            pointer-events: auto; /* Make it clickable when active */
+        }
+        @media (max-width: 640px) { /* Adjust for mobile screens */
+            .chatbot-container {
+                width: calc(100% - 40px); /* Full width minus padding */
+                bottom: 20px; /* Lower on mobile */
+                right: 20px;
+                left: 20px; /* Center it */
+                margin: auto;
+            }
+        }
+    </style> 
+ </head> 
+ <body class="font-sans antialiased bg-white text-gray-800"> 
+  <nav class="bg-white shadow-md p-4"> 
+   <div class="container mx-auto flex justify-between items-center"> <a href="#" class="flex items-center space-x-2"> <img src="https://i.imgur.com/your-alv-logo.png" alt="Alv Studios Logo" class="h-8 md:h-10"> <span class="text-2xl md:text-3xl font-bold text-primary-navy">ALV STUDIOS</span> </a> 
+   </div> 
+  </nav> 
+  <section class="hero-background flex flex-col items-center justify-center min-h-[70vh] md:min-h-[80vh] p-8 text-center bg-light-bg"> 
+   <div class="max-w-4xl bg-white bg-opacity-90 p-8 md:p-12 rounded-lg shadow-xl"> 
+    <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight mb-6 text-primary-navy"> Your Digital Growth Partner: Transforming Ideas into <span class="text-accent-gold">7-Figure Success</span> </h1> 
+    <p class="text-lg md:text-xl mb-8 text-gray-700"> At Alv Studios, we don't just create; we engineer success. Partner with us to build a powerful brand, engage loyal customers, and establish robust systems for sustained growth. </p> <a href="#contact" class="inline-block bg-accent-gold hover:bg-opacity-90 text-white font-bold py-3 px-8 rounded-full text-lg md:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-xl button-hover-effect"> Begin Your Growth Journey </a> 
+   </div> 
+  </section> 
+  <section id="services" class="py-20 bg-white"> 
+   <div class="container mx-auto px-4"> 
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-primary-navy">Our Strategic Pillars for Your Success</h2> 
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"> 
+     <div class="bg-light-bg p-8 rounded-lg shadow-lg text-center border border-transparent transform transition duration-300 hover:scale-105 card-hover-effect"> 
+      <h3 class="text-2xl font-semibold mb-4 text-primary-navy">Branding &amp; Identity</h3> 
+      <p class="text-gray-700 leading-relaxed"> We forge iconic brand identities that resonate deeply with your audience, ensuring immediate recognition and lasting impact. </p> 
+     </div> 
+     <div class="bg-light-bg p-8 rounded-lg shadow-lg text-center border border-transparent transform transition duration-300 hover:scale-105 card-hover-effect"> 
+      <h3 class="text-2xl font-semibold mb-4 text-primary-navy">Website &amp; App Development</h3> 
+      <p class="text-gray-700 leading-relaxed"> Crafting high-performance digital platforms – websites and apps – that are not just beautiful, but also convert visitors into loyal customers. </p> 
+     </div> 
+     <div class="bg-light-bg p-8 rounded-lg shadow-lg text-center border border-transparent transform transition duration-300 hover:scale-105 card-hover-effect"> 
+      <h3 class="text-2xl font-semibold mb-4 text-primary-navy">Custom Automation System</h3> 
+      <p class="text-gray-700 leading-relaxed"> Streamline your operations and amplify efficiency with bespoke automation solutions, designed to scale your business and unlock new revenue streams. </p> 
+     </div> 
+     <div class="bg-light-bg p-8 rounded-lg shadow-lg text-center border border-transparent transform transition duration-300 hover:scale-105 card-hover-effect"> 
+      <h3 class="text-2xl font-semibold mb-4 text-primary-navy">Social Media Management</h3> 
+      <p class="text-gray-700 leading-relaxed"> Cultivating a vibrant online presence that captivates your audience, drives engagement, and builds a community of loyal advocates around your brand. </p> 
+     </div> 
+     <div class="bg-light-bg p-8 rounded-lg shadow-lg text-center border border-transparent transform transition duration-300 hover:scale-105 card-hover-effect"> 
+      <h3 class="text-2xl font-semibold mb-4 text-primary-navy">Digital Marketing &amp; Ads</h3> 
+      <p class="text-gray-700 leading-relaxed"> Implementing data-driven digital marketing campaigns and targeted ads that ensure maximum ROI and measurable customer acquisition. </p> 
+     </div> 
+     <div class="bg-light-bg p-8 rounded-lg shadow-lg text-center border border-transparent transform transition duration-300 hover:scale-105 card-hover-effect"> 
+      <h3 class="text-2xl font-semibold mb-4 text-primary-navy">Digital Invitation</h3> 
+      <p class="text-gray-700 leading-relaxed"> Exquisite digital invitations tailored to elevate your events, leaving a lasting impression on your guests with sophisticated design. </p> 
+     </div> 
+    </div> 
+   </div> 
+  </section> 
+  <section id="portfolio" class="py-20 bg-light-bg"> 
+   <div class="container mx-auto px-4"> 
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-primary-navy">Case Studies: Driving Measurable Results for Our Clients</h2> 
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10"> 
+     <div class="bg-white rounded-lg shadow-lg overflow-hidden border border-transparent transform transition duration-300 hover:scale-105 card-hover-effect"> 
+      <img src="https://images.unsplash.com/photo-1621939106297-c2901306f74a?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Project: Lebaran Cookies Branding" class="w-full h-48 object-cover object-center"> 
+      <div class="p-6"> 
+       <h3 class="text-xl font-semibold mb-2 text-primary-navy">Sweet Delights Co.: <span class="text-accent-gold">Seasonal Sales Surge</span> with Targeted Digital Marketing</h3> 
+       <p class="text-gray-700">Developed a captivating brand presence and executed targeted digital campaigns, resulting in record-breaking sales for seasonal cookies.</p> 
+      </div> 
+     </div> 
+     <div class="bg-white rounded-lg shadow-lg overflow-hidden border border-transparent transform transition duration-300 hover:scale-105 card-hover-effect"> 
+      <img src="https://images.unsplash.com/photo-1620799140188-3b2a6d1fd0d8?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Project: Thrifting E-commerce Platform" class="w-full h-48 object-cover object-center"> 
+      <div class="p-6"> 
+       <h3 class="text-xl font-semibold mb-2 text-primary-navy">Re-Wear Threads: <span class="text-accent-gold">Community Growth &amp; Inventory Automation</span></h3> 
+       <p class="text-gray-700">Built an engaging online thrifting platform complemented by a custom automation system for efficient inventory management and enhanced user experience.</p> 
+      </div> 
+     </div> 
+     <div class="bg-white rounded-lg shadow-lg overflow-hidden border border-transparent transform transition duration-300 hover:scale-105 card-hover-effect"> 
+      <img src="https://images.unsplash.com/photo-1541339907198-e087566f97a4?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Project: Zuniyo Global Ecosystem" class="w-full h-48 object-cover object-center"> 
+      <div class="p-6"> 
+       <h3 class="text-xl font-semibold mb-2 text-primary-navy">Zuniyo: <span class="text-accent-gold">Global Student Engagement &amp; Platform Scalability</span></h3> 
+       <p class="text-gray-700">Developed a robust, scalable global ecosystem platform, fostering student engagement and streamlining university interactions worldwide.</p> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </section> 
+  <section id="about" class="py-20 bg-white"> 
+   <div class="container mx-auto px-4 text-center max-w-3xl"> 
+    <h2 class="text-3xl md:text-4xl font-bold mb-8 text-primary-navy">About Alv Studios: Engineering Your Digital Dominance</h2> 
+    <p class="text-lg text-gray-700 leading-relaxed mb-6"> Alv Studios is not just an agency; we are your strategic partner in navigating and conquering the digital landscape. We are a technology-driven creative agency providing end-to-end solutions for your business's digital transformation. Our expertise lies in the powerful synergy of innovative design, data-driven digital marketing strategies, and robust development, all calibrated to propel your brand towards exponential growth and industry leadership. </p> 
+    <p class="text-lg text-gray-700 leading-relaxed"> We are committed to building strong, competitive brands that capture loyal customers and generate significant returns. Our mission is clear: to deliver effective data-driven digital marketing strategies, enhance brand image through quality design and storytelling, and help businesses achieve market targets with innovative, measurable approaches. </p> 
+   </div> 
+  </section> 
+  <section id="why-us" class="py-20 bg-primary-navy text-white"> 
+   <div class="container mx-auto px-4 text-center max-w-4xl"> 
+    <h2 class="text-3xl md:text-4xl font-bold mb-8 text-accent-gold">Why Alv Studios? Your Path to Unrivaled Digital Success.</h2> 
+    <p class="text-lg text-gray-200 leading-relaxed mb-10"> In a rapidly evolving digital era, a precise marketing strategy is paramount for business success. Alv Studios stands as your solution, empowering you to build and expand your brand through creative, innovative, and data-driven solutions. We are dedicated to providing unparalleled service, meticulously tailored to the distinct needs of each and every client. </p> 
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left"> 
+     <div class="flex items-center space-x-4 bg-white bg-opacity-10 p-5 rounded-lg shadow-md border border-transparent card-hover-effect"> 
+      <svg class="w-10 h-10 text-accent-gold" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+      </svg> 
+      <div> 
+       <h3 class="text-xl font-semibold text-white">Experienced Professional Team</h3> 
+       <p class="text-gray-300">A collective of seasoned experts dedicated to your brand's triumph.</p> 
+      </div> 
+     </div> 
+     <div class="flex items-center space-x-4 bg-white bg-opacity-10 p-5 rounded-lg shadow-md border border-transparent card-hover-effect"> 
+      <svg class="w-10 h-10 text-accent-gold" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+      </svg> 
+      <div> 
+       <h3 class="text-xl font-semibold text-white">Smart Data Utilization</h3> 
+       <p class="text-gray-300">Leveraging deep analytics to craft strategies that guarantee results.</p> 
+      </div> 
+     </div> 
+     <div class="flex items-center space-x-4 bg-white bg-opacity-10 p-5 rounded-lg shadow-md border border-transparent card-hover-effect"> 
+      <svg class="w-10 h-10 text-accent-gold" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4m0-10h.01"></path>
+      </svg> 
+      <div> 
+       <h3 class="text-xl font-semibold text-white">End-to-End Solutions</h3> 
+       <p class="text-gray-300">From concept to conversion, we manage every facet of your digital journey.</p> 
+      </div> 
+     </div> 
+     <div class="flex items-center space-x-4 bg-white bg-opacity-10 p-5 rounded-lg shadow-md border border-transparent card-hover-effect"> 
+      <svg class="w-10 h-10 text-accent-gold" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+      </svg> 
+      <div> 
+       <h3 class="text-xl font-semibold text-white">Dedicated Support</h3> 
+       <p class="text-gray-300">Your success is our priority, with constant support available when you need it.</p> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </section> 
+  <section id="contact" class="py-20 bg-white text-center"> 
+   <div class="container mx-auto px-4"> 
+    <h2 class="text-3xl md:text-4xl font-bold mb-8 text-primary-navy">Ready to Achieve 7-Figure Growth?</h2> 
+    <p class="text-lg text-gray-700 mb-8 max-w-2xl mx-auto"> Connect with our team of experts to discuss how Alv Studios can transform your business with bespoke branding, cutting-edge digital solutions, and powerful automation. </p> <a href="https://wa.me/6281336915221" target="_blank" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-xl button-hover-effect"> Initiate Your Success on WhatsApp </a> 
+    <p class="text-gray-600 mt-4 text-sm md:text-base">Prefer email? Reach us at <a href="mailto:contact@alvstudios.dev" class="text-primary-navy hover:underline">contact@alvstudios.dev</a></p> 
+   </div> 
+  </section> 
+  <footer class="bg-primary-navy text-white py-8"> 
+   <div class="container mx-auto px-4 text-center"> 
+    <p>© 2025 Alv Studios. All rights reserved. Your Digital Growth Partner.</p> 
+   </div> 
+  </footer> <button id="chatbotToggle" class="chatbot-button bg-primary-navy text-white p-4 rounded-full shadow-lg hover:bg-accent-gold transition duration-300 focus:outline-none focus:ring-4 focus:ring-accent-gold focus:ring-opacity-50"> 
+   <svg class="w-8 h-8" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
+   </svg> </button> 
+  <div id="chatbotContainer" class="chatbot-container bg-white rounded-lg shadow-2xl border border-primary-navy flex flex-col hidden"> 
+   <div class="bg-primary-navy text-white p-4 rounded-t-lg flex justify-between items-center"> 
+    <h3 class="text-lg font-semibold">Alv Assistant</h3> <button id="closeChatbot" class="text-white hover:text-accent-gold focus:outline-none"> 
+     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+     </svg> </button> 
+   </div> 
+   <div class="flex-grow p-4 overflow-y-auto text-gray-700"> 
+    <div class="flex items-start mb-4"> 
+     <div class="bg-gray-200 p-3 rounded-lg max-w-[80%]">
+      Halo! Saya Alv Assistant. Ada yang bisa saya bantu?
+     </div> 
+    </div> 
+   </div> 
+   <div class="p-4 border-t border-gray-200"> 
+    <input type="text" placeholder="Ketik pesan Anda..." class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-navy"> 
+   </div> 
+  </div> 
+  <script>
+        const chatbotToggle = document.getElementById('chatbotToggle');
+        const chatbotContainer = document.getElementById('chatbotContainer');
+        const closeChatbot = document.getElementById('closeChatbot');
+        const chatMessages = document.getElementById('chatMessages'); // New: get chat messages area
+        const chatInput = document.getElementById('chatInput');     // New: get chat input field
+
+        // Function to toggle chat visibility
+        function toggleChatbot() {
+            chatbotContainer.classList.toggle('hidden');
+            chatbotContainer.classList.toggle('active');
+            if (chatbotContainer.classList.contains('active')) {
+                chatInput.focus(); // Focus on input when chat opens
+                scrollToBottom();  // Scroll to bottom when chat opens
+            }
+        }
+
+        // Function to display a message in the chat
+        function displayMessage(message, sender) {
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add('flex', 'mb-4');
+
+            if (sender === 'user') {
+                messageDiv.classList.add('justify-end'); // Align to right for user messages
+                messageDiv.innerHTML = `
+                    <div class="bg-primary-navy text-white p-3 rounded-lg max-w-[80%]">
+                        ${message}
+                    </div>
+                `;
+            } else { // sender === 'bot'
+                messageDiv.classList.add('items-start'); // Align to left for bot messages
+                messageDiv.innerHTML = `
+                    <div class="bg-gray-200 text-gray-800 p-3 rounded-lg max-w-[80%]">
+                        ${message}
+                    </div>
+                `;
+            }
+            chatMessages.appendChild(messageDiv);
+            scrollToBottom(); // Scroll to bottom after adding new message
+        }
+
+        // Function to simulate bot response
+        function getBotResponse(userMessage) {
+            const lowerCaseMessage = userMessage.toLowerCase();
+            let botResponse = "Maaf, saya belum memahami pertanyaan Anda. Bisakah Anda mencoba pertanyaan lain seperti 'layanan', 'kontak', atau 'tentang kami'?";
+
+            if (lowerCaseMessage.includes('layanan') || lowerCaseMessage.includes('service')) {
+                botResponse = "Alv Studios menyediakan Branding & Identity, Website & App Development, Custom Automation System, Social Media Management, Digital Marketing & Ads, dan Digital Invitation.";
+            } else if (lowerCaseMessage.includes('kontak') || lowerCaseMessage.includes('hubungi')) {
+                botResponse = "Anda bisa menghubungi kami via WhatsApp di +62 813-3691-5221 atau email contact@alvstudios.dev.";
+            } else if (lowerCaseMessage.includes('tentang kami') || lowerCaseMessage.includes('about')) {
+                botResponse = "Alv Studios adalah mitra strategis Anda untuk transformasi digital, mengombinasikan desain inovatif, strategi pemasaran digital, dan pengembangan berbasis data.";
+            } else if (lowerCaseMessage.includes('harga') || lowerCaseMessage.includes('biaya')) {
+                botResponse = "Untuk informasi harga dan biaya layanan, silakan hubungi tim kami langsung agar kami bisa memberikan penawaran sesuai kebutuhan spesifik Anda.";
+            } else if (lowerCaseMessage.includes('halo') || lowerCaseMessage.includes('hai') || lowerCaseMessage.includes('hi')) {
+                botResponse = "Halo! Senang Anda menyapa. Ada yang bisa saya bantu hari ini?";
+            }
+
+            // Simulate typing delay for a more natural feel
+            setTimeout(() => {
+                displayMessage(botResponse, 'bot');
+            }, 500); // Wait 0.5 seconds before bot responds
+        }
+
+        // Function to scroll chat to bottom
+        function scrollToBottom() {
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        // Event listener for sending message on Enter key
+        chatInput.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                const userMessage = chatInput.value.trim(); // Get message and remove extra spaces
+                if (userMessage) { // Only send if message is not empty
+                    displayMessage(userMessage, 'user'); // Display user's message
+                    getBotResponse(userMessage);       // Get bot's response
+                    chatInput.value = '';              // Clear input field
+                }
+            }
+        });
+
+        // Add event listeners for chatbot toggle buttons
+        chatbotToggle.addEventListener('click', toggleChatbot);
+        closeChatbot.addEventListener('click', toggleChatbot);
+    </script>
+ 
+</body></html>
