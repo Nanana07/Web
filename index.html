@@ -74,10 +74,39 @@
     </style> 
  </head> 
  <body class="font-sans antialiased bg-white text-gray-800"> 
-  <nav class="bg-white shadow-md p-4"> 
-   <div class="container mx-auto flex justify-between items-center"> <a href="#" class="flex items-center space-x-2"> <img src="image/alv_studios.png" alt="Alv Studios Logo" class="h-8 md:h-10"> <span class="text-2xl md:text-3xl font-bold text-primary-navy">ALV STUDIOS</span> </a> 
-   </div> 
-  </nav> 
+  <nav class="bg-white shadow-md p-4 relative">
+    <div class="container mx-auto flex justify-between items-center">
+        <a href="index.html" class="flex items-center space-x-2 z-20"> <img src="image/alv_studios.png" alt="Alv Studios Logo" class="h-8 md:h-10">
+            <span class="text-2xl md:text-3xl font-bold text-primary-navy">ALV STUDIOS</span>
+        </a>
+
+        <ul class="hidden md:flex space-x-8 text-lg font-semibold">
+            <li><a href="index.html" class="text-gray-800 hover:text-accent-gold transition duration-300">Home</a></li>
+            <li><a href="#services" class="text-gray-800 hover:text-accent-gold transition duration-300">Services</a></li>
+            <li><a href="#portfolio" class="text-gray-800 hover:text-accent-gold transition duration-300">Portfolio</a></li>
+            <li><a href="ai-tools.html" class="text-gray-800 hover:text-accent-gold transition duration-300">AI Tools</a></li>
+            <li><a href="#about" class="text-gray-800 hover:text-accent-gold transition duration-300">About Us</a></li>
+            <li><a href="#contact" class="text-gray-800 hover:text-accent-gold transition duration-300">Contact</a></li>
+        </ul>
+
+        <button id="hamburger-button" class="md:hidden text-primary-navy focus:outline-none z-20">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+
+        <div id="mobile-menu" class="hidden fixed inset-0 bg-primary-navy bg-opacity-95 z-10 flex flex-col items-center justify-center space-y-8 md:hidden transition-opacity duration-300 ease-in-out opacity-0">
+            <ul class="text-2xl text-white flex flex-col items-center space-y-6">
+                <li><a href="index.html" class="hover:text-accent-gold transition duration-300 mobile-menu-link">Home</a></li>
+                <li><a href="#services" class="hover:text-accent-gold transition duration-300 mobile-menu-link">Services</a></li>
+                <li><a href="#portfolio" class="hover:text-accent-gold transition duration-300 mobile-menu-link">Portfolio</a></li>
+                <li><a href="ai-tools.html" class="hover:text-accent-gold transition duration-300 mobile-menu-link">AI Tools</a></li>
+                <li><a href="#about" class="hover:text-accent-gold transition duration-300 mobile-menu-link">About Us</a></li>
+                <li><a href="#contact" class="hover:text-accent-gold transition duration-300 mobile-menu-link">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
   <section class="hero-background flex flex-col items-center justify-center min-h-[70vh] md:min-h-[80vh] p-8 text-center bg-light-bg"> 
    <div class="max-w-4xl bg-white bg-opacity-90 p-8 md:p-12 rounded-lg shadow-xl"> 
     <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight mb-6 text-primary-navy"> Your Digital Growth Partner: Transforming Ideas into <span class="text-accent-gold">7-Figure Success</span> </h1> 
@@ -313,6 +342,35 @@
         // Add event listeners for chatbot toggle buttons
         chatbotToggle.addEventListener('click', toggleChatbot);
         closeChatbot.addEventListener('click', toggleChatbot);
+       // Navigasi Hamburger Menu
+const hamburgerButton = document.getElementById('hamburger-button');
+const mobileMenu = document.getElementById('mobile-menu');
+const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link'); // Get all links in the mobile menu
+
+function toggleMobileMenu() {
+    mobileMenu.classList.toggle('hidden');
+    // Toggle opacity for smooth transition
+    if (mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.remove('opacity-100');
+        mobileMenu.classList.add('opacity-0');
+    } else {
+        mobileMenu.classList.remove('opacity-0');
+        mobileMenu.classList.add('opacity-100');
+    }
+}
+
+// Event listener untuk tombol hamburger
+hamburgerButton.addEventListener('click', toggleMobileMenu);
+
+// Event listener untuk setiap link di mobile menu (agar menu tertutup setelah klik link)
+mobileMenuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        // Hanya tutup menu jika tidak di desktop
+        if (window.innerWidth < 768) { // Tailwind's 'md' breakpoint is 768px
+            toggleMobileMenu();
+        }
+    });
+})
     </script> 
  </body>
 </html>
