@@ -1,0 +1,58 @@
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333; /* Warna latar belakang header */
+    padding: 10px 0;
+    text-align: center;
+}
+
+.main-nav ul {
+    list-style: none; /* Menghilangkan bullet point dari daftar */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Membuat item menu menjadi baris */
+    justify-content: center; /* Memusatkan item menu */
+}
+
+.main-nav li {
+    margin: 0 15px; /* Memberi jarak antar item menu */
+}
+
+.main-nav a {
+    text-decoration: none; /* Menghilangkan garis bawah dari tautan */
+    color: #fff; /* Warna teks tautan */
+    padding: 5px 10px;
+    display: block;
+    transition: background-color 0.3s ease; /* Efek transisi saat hover */
+}
+
+.main-nav a:hover {
+    background-color: #555; /* Warna latar belakang saat di-hover */
+    border-radius: 4px;
+}
+
+/* Sedikit gaya untuk main content agar ada jarak */
+main {
+    padding: 20px;
+    max-width: 960px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #333;
+    color: #fff;
+  }
