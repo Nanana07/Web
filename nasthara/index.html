@@ -1,0 +1,865 @@
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasthara | A Cookie Made to Feel Like Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Poppins:wght@300;400;600&amp;family=Dancing+Script:wght@400&amp;display=swap" rel="stylesheet">
+<style type="text/css" id="dcoder_stylesheet">/* General Styling & Reset */
+:root {
+    --color-beige: #F5F5DC;
+    --color-warm-cream: #FFFDD0;
+    --color-subtle-gold: #B8860B; /* Darker gold for accents */
+    --color-light-brown: #CD853F;
+    --color-dark-brown: #654321;
+    --color-text-dark: #333;
+    --color-text-light: #fefefe;
+    --font-serif: 'Playfair Display', serif;
+    --font-sans-serif: 'Poppins', sans-serif;
+    --font-handwritten: 'Dancing Script', cursive;
+    --color-shopee-orange: #EE4D2D; /* Shopee brand color */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans-serif);
+    line-height: 1.6;
+    color: var(--color-text-dark);
+    background-color: var(--color-warm-cream);
+    overflow-x: hidden; /* Prevent horizontal scroll due to padding */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    color: var(--color-dark-brown);
+    margin-bottom: 0.5em;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+a {
+    color: var(--color-subtle-gold);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-light-brown);
+}
+
+section {
+    padding: 80px 5%; /* Large padding for spacious layout */
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden; /* Ensure content stays within bounds */
+}
+
+/* Subtle background texture (example - you'd use a real image here) */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" opacity="0.1"><rect width="100" height="100" fill="%23FFFDD0"/><path d="M0 0h100v100H0zM10 10h80v80H10z" fill="none" stroke="%23CD853F" stroke-width="0.5"/></svg>'); /* Placeholder for linen/parchment texture */
+    background-repeat: repeat;
+    pointer-events: none; /* Allow clicks through this overlay */
+    z-index: -1;
+    opacity: 0.3; /* Subtle */
+}
+
+/* Call to Action Button */
+.cta-button {
+    display: inline-block;
+    background-color: var(--color-subtle-gold);
+    color: var(--color-text-light);
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+    margin: 5px; /* Added margin for buttons in a group */
+}
+
+.cta-button:hover {
+    background-color: var(--color-light-brown);
+}
+
+/* Shopee Button Style */
+.shopee-button {
+    background-color: var(--color-shopee-orange);
+}
+
+.shopee-button:hover {
+    background-color: darken(var(--color-shopee-orange), 10%); /* Pseudo-darken, replace with a fixed darker color or a proper SASS function */
+    filter: brightness(0.9); /* Simple darkening effect */
+}
+
+/* Button group styling */
+.hero-cta-group, .limited-batch-cta-group {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    justify-content: center;
+    gap: 10px; /* Space between buttons */
+    margin-top: 20px;
+}
+
+
+/* Handwritten Quote Style */
+.handwritten-quote {
+    font-family: var(--font-handwritten);
+    font-size: 1.8em;
+    font-weight: 400;
+    text-align: center;
+    color: var(--color-dark-brown);
+    margin: 40px auto;
+    padding: 0 20px;
+    max-width: 700px;
+    line-height: 1.4;
+}
+
+/* Floating WhatsApp Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366; /* WhatsApp Green */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+.whatsapp-float img {
+    width: 35px;
+    height: 35px;
+}
+
+/* 1. Hero Section */
+.hero-section {
+    min-height: 100vh; /* Full-screen height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    color: var(--color-text-light); /* Assuming dark image background */
+    padding: 0; /* Remove default padding for full-screen */
+    scroll-snap-align: start; /* For scroll-snap */
+}
+
+.hero-image-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-light-brown); /* Placeholder color */
+    /* This should be replaced with a beautiful image of nastar */
+    background-image: url('placeholder-nastar-hero.jpg'); /* Replace with your actual image */
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.8); /* Slightly dim the image for text readability */
+    z-index: -1;
+}
+
+.hero-content {
+    z-index: 1;
+    max-width: 800px;
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay for text readability */
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    color: var(--color-text-light);
+    margin-bottom: 0.2em;
+}
+
+.hero-content p {
+    font-size: 1.3em;
+    font-weight: 300;
+    margin-bottom: 2em;
+    color: var(--color-beige);
+}
+
+/* 2. About the Brand Section */
+.about-section {
+    background-color: var(--color-beige);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-text {
+    flex: 1;
+    font-size: 1.1em;
+}
+
+.about-text h2 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+}
+
+.about-image-placeholder {
+    flex: 1;
+    min-height: 400px;
+    background-color: var(--color-light-brown); /* Placeholder */
+    background-image: url('placeholder-ingredients.jpg'); /* Replace */
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* 3. Product Showcase Section */
+.product-showcase-section {
+    text-align: center;
+    background-color: var(--color-warm-cream);
+}
+
+.product-showcase-section h2 {
+    font-size: 3em;
+    margin-bottom: 1.5em;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    scroll-snap-type: x mandatory; /* For horizontal scroll-snap on mobile */
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+.product-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s ease;
+    position: relative; /* For bestseller sticker */
+    scroll-snap-align: center; /* For scroll-snap */
+}
+
+.product-item:hover {
+    transform: translateY(-10px);
+}
+
+.product-image-placeholder {
+    width: 100%;
+    height: 250px;
+    background-color: var(--color-beige); /* Placeholder */
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background-size: contain; /* Changed to contain to show full cookie on black background */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #000; /* Black background for the image to blend with logo style */
+}
+
+.product-item h3 {
+    font-size: 1.8em;
+    color: var(--color-dark-brown);
+}
+
+.product-description {
+    font-size: 0.95em;
+    color: #666;
+    min-height: 50px; /* Ensure consistent height */
+}
+
+.bestseller-sticker {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: var(--color-subtle-gold);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* 4. The Feelings Section */
+.feelings-section {
+    background-color: var(--color-light-brown);
+    color: var(--color-text-light);
+    text-align: center;
+    padding: 80px 5%; /* Increased padding for emphasis */
+}
+
+.feelings-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Stack vertically for simpler design */
+    align-items: center;
+    gap: 40px;
+}
+
+.feelings-text h2 {
+    font-size: 3em;
+    color: var(--color-text-light);
+}
+
+.feelings-text p {
+    font-size: 1.1em;
+    color: var(--color-beige);
+    margin-bottom: 2em;
+}
+
+.feelings-image-placeholder {
+    width: 100%;
+    height: 400px;
+    background-color: var(--color-beige); /* Placeholder */
+    background-image: url('placeholder-tea-table.jpg'); /* Replace */
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* 5. Testimonials Section */
+.testimonials-section {
+    background-color: var(--color-beige);
+    text-align: center;
+}
+
+.testimonials-section h2 {
+    font-size: 3em;
+    margin-bottom: 1.5em;
+}
+
+.testimonials-carousel {
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 30px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonial-item {
+    flex: 0 0 350px; /* Fixed width for carousel items */
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    text-align: center;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testimonial-item.polaroid-style {
+    border: 5px solid #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    background-color: #fcfcfc;
+    padding-bottom: 40px; /* Space for polaroid border */
+    position: relative;
+    transform: rotate(calc(var(--rotation-angle, 0deg))); /* Optional random rotation */
+}
+
+.testimonial-item.polaroid-style::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px; /* White space at bottom */
+    background-color: white;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    z-index: -1;
+}
+
+.customer-photo-placeholder {
+    width: 80px;
+    height: 80px;
+    background-color: #ccc; /* Placeholder */
+    border-radius: 50%;
+    margin-bottom: 15px;
+    background-image: url('placeholder-avatar.png'); /* Replace with actual customer photos */
+    background-size: cover;
+    background-position: center;
+}
+
+.testimonial-item p {
+    font-style: italic;
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.testimonial-item span {
+    font-weight: 600;
+    color: var(--color-dark-brown);
+    font-size: 0.9em;
+}
+
+/* 6. Limited Batch Reminder Section */
+.limited-batch-section {
+    background-color: var(--color-dark-brown);
+    color: var(--color-text-light);
+    text-align: center;
+    padding: 80px 5%;
+}
+
+.limited-batch-content h2 {
+    font-size: 3em;
+    color: var(--color-text-light);
+}
+
+.limited-batch-content p {
+    font-size: 1.1em;
+    color: var(--color-beige);
+    margin-bottom: 2em;
+}
+
+.seasonal-tag {
+    display: inline-block;
+    background-color: var(--color-subtle-gold);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 0.5px;
+}
+
+.countdown-placeholder {
+    font-family: var(--font-serif);
+    font-size: 2.5em;
+    color: var(--color-text-light);
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+/* 7. Footer */
+.footer-section {
+    background-color: var(--color-dark-brown);
+    color: var(--color-beige);
+    padding: 50px 5%;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px; /* Space between columns */
+}
+
+.footer-logo, .footer-contact, .footer-info {
+    flex: 1;
+    min-width: 250px; /* Minimum width before wrapping */
+    text-align: left;
+}
+
+.footer-logo img {
+    width: 150px; /* Adjust as needed */
+    margin-bottom: 10px;
+    filter: brightness(1.5); /* Make logo brighter on dark background */
+}
+
+.footer-logo .tagline {
+    font-family: var(--font-handwritten);
+    font-size: 1.3em;
+    color: var(--color-beige);
+    margin-top: 10px;
+}
+
+.footer-contact h3 {
+    color: var(--color-text-light);
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.footer-contact a {
+    display: block;
+    color: var(--color-beige);
+    margin-bottom: 8px;
+    font-size: 1em;
+}
+
+.footer-contact a:hover {
+    color: var(--color-subtle-gold);
+}
+
+.footer-info {
+    text-align: right;
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+.footer-info p {
+    margin-bottom: 5px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    section {
+        padding: 50px 8%; /* Increased horizontal padding for mobile */
+        margin-bottom: 30px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    .hero-content {
+        padding: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2em;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+    }
+
+    .cta-button {
+        padding: 12px 25px;
+        font-size: 0.9em;
+    }
+
+    .hero-cta-group, .limited-batch-cta-group {
+        flex-direction: column; /* Stack buttons vertically on mobile */
+        align-items: center; /* Center stacked buttons */
+    }
+
+    .handwritten-quote {
+        font-size: 1.4em;
+        margin: 20px auto;
+    }
+
+    .about-content {
+        flex-direction: column; /* Stack content vertically */
+        gap: 30px;
+        text-align: center;
+    }
+
+    .about-image-placeholder {
+        width: 100%;
+        height: 300px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr; /* Single column on mobile */
+        padding: 0 10px; /* Add some padding to the grid itself */
+        scroll-snap-type: x mandatory; /* Keep horizontal snap for product items */
+        overflow-x: scroll;
+    }
+
+    .product-item {
+        flex-shrink: 0; /* Prevent shrinking */
+        width: 85%; /* Make items take up most of the screen width */
+        margin: 0 auto;
+        scroll-snap-align: center;
+    }
+
+    .product-image-placeholder {
+        height: 200px;
+    }
+
+    .product-description {
+        min-height: unset; /* Remove fixed height on mobile */
+    }
+
+    .feelings-content {
+        gap: 30px;
+    }
+
+    .feelings-text h2 {
+        font-size: 2.2em;
+    }
+
+    .feelings-image-placeholder {
+        height: 300px;
+    }
+
+    .testimonials-carousel {
+        padding: 10px;
+        gap: 20px;
+    }
+
+    .testimonial-item {
+        flex: 0 0 80%; /* Larger width for mobile carousel */
+    }
+
+    .limited-batch-content h2 {
+        font-size: 2.2em;
+    }
+
+    .countdown-placeholder {
+        font-size: 2em;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-logo, .footer-contact, .footer-info {
+        min-width: unset;
+        width: 100%; /* Full width for stacked items */
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .footer-info {
+        margin-top: 20px;
+    }
+}
+
+/* Optional: Scroll-snap for hero and product sections for smoother navigation on scroll */
+html {
+    scroll-snap-type: y proximity; /* Use 'y mandatory' for strict snapping */
+    scroll-behavior: smooth;
+}
+.hero-section, .product-showcase-section {
+    scroll-snap-align: start;
+}
+/* Ensure the carousel also snaps horizontally */
+.product-grid, .testimonials-carousel {
+    scroll-snap-type: x mandatory;
+}
+.product-item, .testimonial-item {
+    scroll-snap-align: center;
+}
+</style></head>
+<body>
+
+    <a href="https://wa.me/6282233676703" class="whatsapp-float" target="_blank" aria-label="Order via WhatsApp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png" alt="WhatsApp Icon">
+    </a>
+
+    <section class="hero-section" id="home">
+        <div class="hero-content">
+            <h1>A Cookie Made to Feel Like Home</h1>
+            <p>We built a brand that melts hearts before it melts in your mouth ✨</p>
+            <div class="hero-cta-group">
+                <a href="https://wa.me/6282233676703" class="cta-button" target="_blank">Order Now</a>
+                <a href="https://shopee.co.id/nasthar_a" class="cta-button shopee-button" target="_blank">Order via Shopee</a>
+            </div>
+        </div>
+        <div class="hero-image-placeholder"></div>
+    </section>
+
+    <section class="about-section" id="about">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>Our Story, Your Comfort</h2>
+                <p>Di balik setiap toples Nasthara, ada dapur kecil yang selalu hangat. Di sanalah semuanya dimulai — bukan dari pabrik besar, tapi dari resep warisan keluarga, tangan ibu, dan cinta yang nggak pernah ditakar.<br>
+
+<br>Kami percaya, makanan terenak bukan yang paling mahal. Tapi yang bisa bikin kamu merasa pulang, meski sedang jauh dari rumah. Karena itu, setiap kue di Nasthara dibuat dengan dua bahan utama: rasa sayang dan kenangan.</p>
+                <blockquote class="handwritten-quote">
+                   “Nasthara hadir bukan untuk sekadar memenuhi toples di meja tamu. Tapi untuk mengisi ruang rindu.”
+                </blockquote>
+            </div>
+            <div class="about-image-placeholder">
+                </div>
+        </div>
+    </section>
+
+    <section class="product-showcase-section" id="products">
+        <h2>Our Delights</h2>
+        <div class="product-grid">
+            <div class="product-item">
+                <div class="product-image-placeholder" style="background-image: url('image/nastar.png');">
+                    <span class="bestseller-sticker">Bestseller 💛</span>
+                </div>
+                <h3>Nastar Keju Klasik</h3>
+                <p class="product-description">Reminds you of: Kumpul keluarga di ruang tamu nenek, aroma manis mentega dan nanas.</p>
+            </div>
+            <div class="product-item">
+                <div class="product-image-placeholder" style="background-image: url('image/palm-cheese.png');"></div>
+                <h3>Palm Cheese</h3>
+                <p class="product-description">Reminds you of: Keju gurih berpadu manisnya gula aren, kelezatan yang tak terduga.</p>
+            </div>
+            <div class="product-item">
+                <div class="product-image-placeholder" style="background-image: url('image/lidah-kucing.png');"></div>
+                <h3>Lidah Kucing Vanilla</h3>
+                <p class="product-description">Reminds you of: Obrolan ringan ditemani secangkir teh hangat, kebahagiaan yang renyah.</p>
+            </div>
+            <div class="product-item">
+                <div class="product-image-placeholder" style="background-image: url('image/kastengel.png');"></div>
+                <h3>Kastengel Premium</h3>
+                <p class="product-description">Reminds you of: Keju melimpah dan renyahnya kebersamaan, tradisi yang selalu dinanti.</p>
+            </div>
+            <div class="product-item">
+                <div class="product-image-placeholder" style="background-image: url('image/choco-mede.png');"></div>
+                <h3>Choco Mede Sensasi</h3>
+                <p class="product-description">Reminds you of: Petualangan rasa baru di setiap gigitan, kejutan di tengah kesederhanaan.</p>
+            </div>
+            <div class="product-item">
+                <div class="product-image-placeholder" style="background-image: url('image/bawang-gunting.png');"></div>
+                <h3>Bawang Gunting Gurih</h3>
+                <p class="product-description">Reminds you of: Camilan renyah di sore hari, teman setia saat santai bersama keluarga.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="feelings-section">
+        <div class="feelings-content">
+            <div class="feelings-text">
+                <h2>More Than Just Cookies. It’s a Memory in Every Bite.</h2>
+                <p>Kami percaya, rasa yang paling berkesan bukan hanya tentang bahan-bahan terbaik, tapi juga sentuhan hati yang merangkainya. Kue kami bisa sama dengan yang lain, tapi sentuhan tangan yang membuatnya, itu yang membedakan.</p>
+                <blockquote class="handwritten-quote">
+                    “Once you pop, you can’t stop”  
+                </blockquote>
+            </div>
+            <div class="feelings-image-placeholder">
+                </div>
+        </div>
+    </section>
+
+    <section class="testimonials-section">
+        <h2>What Our Family Says</h2>
+        <div class="testimonials-carousel">
+            <div class="testimonial-item polaroid-style">
+                <div class="customer-photo-placeholder"></div>
+                <p>"Nasthara benar-benar membawa pulang rasa Lebaran! Nastarnya meleleh di lidah, persis kayak buatan Ibu."</p>
+                <span>- Sarah K.</span>
+            </div>
+            <div class="testimonial-item polaroid-style">
+                <div class="customer-photo-placeholder"></div>
+                <p>"Cokelat medenya juara! Pengiriman cepat dan packaging-nya premium banget. Bakal repeat order!"</p>
+                <span>- Budi A.</span>
+            </div>
+            <div class="testimonial-item polaroid-style">
+                <div class="customer-photo-placeholder"></div>
+                <p>"Setiap gigitan lidah kucingnya bikin nostalgia masa kecil. Ini bukan cuma kue, tapi mesin waktu!"</p>
+                <span>- Dewi R.</span>
+            </div>
+            </div>
+    </section>
+
+    <section class="limited-batch-section">
+        <div class="limited-batch-content">
+            <span class="seasonal-tag">Seasonal Only!</span>
+            <h2>Jangan Sampai Kehabisan Kehangatan Ini.</h2>
+            <p>Setiap batch Nasthara dibuat terbatas untuk menjaga kualitas dan rasa otentik. Pastikan Anda mendapatkan bagian dari kehangatan ini sebelum Lebaran usai.</p>
+            <div class="limited-batch-cta-group">
+                <a href="https://wa.me/6282233676703" class="cta-button" target="_blank">Order Before It’s Gone</a>
+                <a href="https://shopee.co.id/nasthar_a" class="cta-button shopee-button" target="_blank">Belanja di Shopee</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-section">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="image/nasthara.png" alt="Nasthara Logo">
+                <p class="tagline">“Because every home has a taste. And that taste is Nasthara.”</p>
+            </div>
+            <div class="footer-contact">
+                <h3>Connect With Us</h3>
+                <a href="https://wa.me/6282233676703" target="_blank">WhatsApp</a><br>
+                <a href="https://instagram.com/nasthar_a" target="_blank">Instagram</a><br>
+                <a href="https://shopee.co.id/nasthar_a" target="_blank">Shopee</a>
+            </div>
+            <div class="footer-info">
+                <p>Since 2022, Made by Order (PO)</p>
+                <p>Handmade in Indonesia — from our kitchen to your heart.</p>
+                <p>© 2025 Nasthara. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+<script type="text/javascript" id="dcoder_script">document.addEventListener('DOMContentLoaded', () => {
+    // Optional: Smooth scroll for internal links (if any)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Optional: Dynamic Countdown for Limited Batch Reminder (Consider removing if not needed with "Made by Order")
+    // const targetDate = new Date("2025-04-10T00:00:00").getTime(); // Example: April 10, 2025
+
+    // const countdownElement = document.getElementById('countdown');
+    // if (countdownElement) {
+    //     function updateCountdown() {
+    //         const now = new Date().getTime();
+    //         const distance = targetDate - now;
+
+    //         if (distance < 0) {
+    //             countdownElement.innerHTML = "Batch Habis!";
+    //             clearInterval(countdownInterval);
+    //             return;
+    //         }
+
+    //         const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    //         const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    //         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    //         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    //         countdownElement.innerHTML = `${days} Hari ${hours} Jam ${minutes} Menit ${seconds} Detik`;
+    //     }
+
+    //     const countdownInterval = setInterval(updateCountdown, 1000);
+    //     updateCountdown(); // Initial call
+    // }
+
+    // Optional: Random rotation for polaroid testimonials (aesthetic touch)
+    document.querySelectorAll('.testimonial-item.polaroid-style').forEach(item => {
+        const rotation = (Math.random() * 6) - 3; // -3deg to +3deg
+        item.style.setProperty('--rotation-angle', `${rotation}deg`);
+    });
+});</script></body></html>
