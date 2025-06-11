@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="id"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Nasthara | A Cookie Made to Feel Like Home</title> 
+  <script src="https://cdn.tailwindcss.com"></script> 
+  <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'beige-custom': '#F5F5DC',      // --color-beige
+                        'warm-cream-custom': '#FFFDD0', // --color-warm-cream
+                        'subtle-gold-custom': '#B8860B',// --color-subtle-gold
+                        'light-brown-custom': '#CD853F',// --color-light-brown
+                        'dark-brown-custom': '#654321', // --color-dark-brown
+                        'shopee-orange': '#EE4D2D',     // --color-shopee-orange
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['Poppins', 'sans-serif'],
+                        handwritten: ['"Dancing Script"', 'cursive'],
+                    },
+                    spacing: {
+                        '5%': '5%', // Custom padding value
+                        '8%': '8%', // Custom padding value for mobile
+                    }
+                }
+            }
+        }
+    </script> 
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Poppins:wght@300;400;600&amp;family=Dancing+Script:wght@400&amp;display=swap" rel="stylesheet"> 
+  <style>
+        /* Custom styles that cannot be done with Tailwind directly, or for specific overrides */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Subtle background texture */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" opacity="0.1"><rect width="100" height="100" fill="%23FFFDD0"/><path d="M0 0h100v100H0zM10 10h80v80H10z" fill="none" stroke="%23CD853F" stroke-width="0.5"/></svg>'); /* Placeholder for linen/parchment texture */
+            background-repeat: repeat;
+            pointer-events: none;
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        /* Optional: Scroll-snap (for older browsers or specific use cases, but usually better via JS or just not used for simple scroll) */
+        /*
+        html { scroll-snap-type: y proximity; }
+        .hero-section, .product-showcase-section { scroll-snap-align: start; }
+        .product-grid, .testimonials-carousel { scroll-snap-type: x mandatory; }
+        .product-item, .testimonial-item { scroll-snap-align: center; }
+        */
+    </style> 
+ </head> 
+ <body class="font-sans antialiased bg-warm-cream-custom text-gray-800 overflow-x-hidden"> <a href="https://wa.me/6282233676703" class="fixed bottom-5 right-5 z-[1000] w-[60px] h-[60px] bg-[#25D366] rounded-full flex justify-center items-center shadow-lg transition-transform duration-300 hover:scale-110" aria-label="Order via WhatsApp"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png" alt="WhatsApp Icon" class="w-[35px] h-[35px]"> </a> 
+  <header class="bg-dark-brown-custom py-4 px-5% shadow-md sticky top-0 z-[999] flex justify-center"> 
+   <div class="flex items-center justify-between max-w-screen-xl w-full"> <a href="#home" class="flex items-center no-underline text-white"> <img src="image/nasthara.png" alt="Nasthara Logo" class="h-10 mr-2"> <span class="font-serif text-3xl font-bold text-white">Nasthara</span> </a> 
+   </div> 
+  </header> 
+  <section class="min-h-screen flex items-center justify-center text-center relative px-0 py-0 scroll-snap-align-start" id="home"> 
+   <div class="absolute inset-0 bg-light-brown-custom bg-[url('placeholder-nastar-hero.jpg')] bg-cover bg-center brightness-80 z-[-1]"></div> 
+   <div class="z-10 max-w-4xl bg-black bg-opacity-40 p-10 rounded-lg text-white"> 
+    <h1 class="text-5xl md:text-6xl lg:text-7xl font-serif text-white mb-2 leading-tight">A Cookie Made to Feel Like Home</h1> 
+    <p class="text-xl md:text-2xl font-light mb-8 text-beige-custom">We built a brand that melts hearts before it melts in your mouth ✨</p> 
+    <div class="flex flex-wrap justify-center gap-4 mt-8"> <a href="https://wa.me/6282233676703" class="inline-block bg-subtle-gold-custom text-white py-4 px-8 rounded-full font-semibold uppercase tracking-wide transition-colors duration-300 hover:bg-light-brown-custom shadow-xl" target="_blank">Order Now</a> <a href="https://shopee.co.id/nasthar_a" class="inline-block bg-shopee-orange text-white py-4 px-8 rounded-full font-semibold uppercase tracking-wide transition-colors duration-300 hover:brightness-90 shadow-xl" target="_blank">Order via Shopee</a> 
+    </div> 
+   </div> 
+  </section> 
+  <section class="py-20 px-5% bg-beige-custom rounded-lg shadow-md mb-10"> 
+   <div class="flex flex-col md:flex-row items-center gap-12 max-w-screen-xl mx-auto"> 
+    <div class="flex-1 text-lg text-gray-700 md:text-left text-center"> 
+     <h2 class="text-4xl md:text-5xl font-serif text-dark-brown-custom mb-6">Our Story, Your Comfort</h2> 
+     <p> Di balik setiap toples Nasthara, ada dapur kecil yang selalu hangat. Di sanalah semuanya dimulai — bukan dari pabrik besar, tapi dari resep warisan keluarga, tangan ibu, dan cinta yang tak pernah ditakar.
+
+<br><br>Kami percaya, makanan terenak bukan yang paling mahal. Tapi yang bisa bikin kamu merasa pulang, meski sedang jauh dari rumah. Karena itu, setiap kue di Nasthara dibuat dengan dua bahan utama: rasa sayang dan kenangan 🤎</p> 
+     <blockquote class="font-handwritten text-3xl text-center text-dark-brown-custom my-10 px-5 max-w-2xl mx-auto leading-relaxed">
+       “Nasthara hadir bukan untuk sekadar memenuhi toples di meja tamu. Tapi untuk mengisi ruang rindu.” 
+     </blockquote> 
+    </div> 
+    <div class="flex-1 min-h-[400px] w-full bg-light-brown-custom bg-[url('placeholder-ingredients.jpg')] bg-cover bg-center rounded-lg shadow-lg"> 
+    </div> 
+   </div> 
+  </section> 
+  <section class="py-20 px-5% text-center bg-warm-cream-custom mb-10"> 
+   <h2 class="text-4xl md:text-5xl font-serif text-dark-brown-custom mb-16">Our Delights</h2> 
+   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-screen-xl mx-auto overflow-x-auto snap-x snap-mandatory"> 
+    <div class="flex-shrink-0 w-full sm:w-auto bg-white p-6 rounded-lg shadow-md text-center transition-transform duration-300 hover:translate-y-[-10px] relative snap-center"> 
+     <div class="w-full h-[250px] bg-black bg-contain bg-no-repeat bg-center rounded-lg mb-4" style="background-image: url('image/nastar.png');"></div> <span class="absolute top-4 left-4 bg-subtle-gold-custom text-white py-1 px-3 rounded text-sm font-bold uppercase shadow-md">Bestseller 💛</span> 
+     <h3 class="text-2xl font-serif text-dark-brown-custom mb-2">Nastar</h3> 
+     <p class="text-base text-gray-600 min-h-[50px]">Reminds you of: Kumpul keluarga di ruang tamu nenek, aroma manis mentega dan nanas.</p> 
+    </div> 
+    <div class="flex-shrink-0 w-full sm:w-auto bg-white p-6 rounded-lg shadow-md text-center transition-transform duration-300 hover:translate-y-[-10px] relative snap-center"> 
+     <div class="w-full h-[250px] bg-black bg-contain bg-no-repeat bg-center rounded-lg mb-4" style="background-image: url('image/palm-cheese.png');"></div> 
+     <h3 class="text-2xl font-serif text-dark-brown-custom mb-2">Palm Cheese</h3> 
+     <p class="text-base text-gray-600 min-h-[50px]">Reminds you of: Keju gurih berpadu manisnya gula aren, kelezatan yang tak terduga.</p> 
+    </div> 
+    <div class="flex-shrink-0 w-full sm:w-auto bg-white p-6 rounded-lg shadow-md text-center transition-transform duration-300 hover:translate-y-[-10px] relative snap-center"> 
+     <div class="w-full h-[250px] bg-black bg-contain bg-no-repeat bg-center rounded-lg mb-4" style="background-image: url('image/lidah-kucing.png');"></div> 
+     <h3 class="text-2xl font-serif text-dark-brown-custom mb-2">Lidah Kucing</h3> 
+     <p class="text-base text-gray-600 min-h-[50px]">Reminds you of: Obrolan ringan ditemani secangkir teh hangat, kebahagiaan yang renyah.</p> 
+    </div> 
+    <div class="flex-shrink-0 w-full sm:w-auto bg-white p-6 rounded-lg shadow-md text-center transition-transform duration-300 hover:translate-y-[-10px] relative snap-center"> 
+     <div class="w-full h-[250px] bg-black bg-contain bg-no-repeat bg-center rounded-lg mb-4" style="background-image: url('image/kastengel.png');"></div> 
+     <h3 class="text-2xl font-serif text-dark-brown-custom mb-2">Kastengel Premium</h3> 
+     <p class="text-base text-gray-600 min-h-[50px]">Reminds you of: Keju melimpah dan renyahnya kebersamaan, tradisi yang selalu dinanti.</p> 
+    </div> 
+    <div class="flex-shrink-0 w-full sm:w-auto bg-white p-6 rounded-lg shadow-md text-center transition-transform duration-300 hover:translate-y-[-10px] relative snap-center"> 
+     <div class="w-full h-[250px] bg-black bg-contain bg-no-repeat bg-center rounded-lg mb-4" style="background-image: url('image/choco-mede.png');"></div> 
+     <h3 class="text-2xl font-serif text-dark-brown-custom mb-2">Choco Mede</h3> 
+     <p class="text-base text-gray-600 min-h-[50px]">Reminds you of: Petualangan rasa baru di setiap gigitan, kejutan di tengah kesederhanaan.</p> 
+    </div> 
+    <div class="flex-shrink-0 w-full sm:w-auto bg-white p-6 rounded-lg shadow-md text-center transition-transform duration-300 hover:translate-y-[-10px] relative snap-center"> 
+     <div class="w-full h-[250px] bg-black bg-contain bg-no-repeat bg-center rounded-lg mb-4" style="background-image: url('image/bawang-gunting.png');"></div> 
+     <h3 class="text-2xl font-serif text-dark-brown-custom mb-2">Bawang Gunting</h3> 
+     <p class="text-base text-gray-600 min-h-[50px]">Reminds you of: Camilan renyah di sore hari, teman setia saat santai bersama keluarga.</p> 
+    </div> 
+   </div> 
+  </section> 
+  <section class="py-20 px-5% bg-light-brown-custom text-white text-center mb-10"> 
+   <div class="flex flex-col items-center gap-10 max-w-screen-lg mx-auto"> 
+    <div class="text-center"> 
+     <h2 class="text-4xl md:text-5xl font-serif text-white mb-6">More Than Just Cookies. It’s a Memory in Every Bite.</h2> 
+     <p class="text-lg text-beige-custom mb-8">Kami percaya, rasa yang paling berkesan bukan hanya tentang bahan-bahan terbaik, tapi juga sentuhan hati yang merangkainya. Kue kami bisa sama dengan yang lain, tapi sentuhan tangan yang membuatnya, itu yang membedakan.</p> 
+     <blockquote class="font-handwritten text-2xl text-center text-white my-10 px-5 max-w-2xl mx-auto leading-relaxed">
+      "Once you pop, you can’t stop”
+     </blockquote> 
+    </div> 
+    <div class="w-full h-[400px] bg-beige-custom bg-[url('placeholder-tea-table.jpg')] bg-cover bg-center rounded-lg shadow-xl"> 
+    </div> 
+   </div> 
+  </section> 
+  <section class="py-20 px-5% bg-beige-custom text-center mb-10"> 
+   <h2 class="text-4xl md:text-5xl font-serif text-dark-brown-custom mb-16">What Our Family Says</h2> 
+   <div class="flex overflow-x-auto snap-x snap-mandatory gap-8 px-5 py-5 max-w-screen-xl mx-auto"> 
+    <div class="flex-shrink-0 w-[350px] bg-white p-6 rounded-lg shadow-md text-center snap-start border-white border-[5px] shadow-lg relative pb-10 after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-8 after:bg-white after:rounded-b-lg"> 
+     <div class="w-20 h-20 bg-gray-300 rounded-full mx-auto mb-4 bg-[url('placeholder-avatar.png')] bg-cover bg-center"></div> 
+     <p class="italic text-gray-700 text-base mb-4">"Nasthara benar-benar membawa pulang rasa Lebaran! Nastarnya meleleh di lidah, persis kayak buatan Ibu."</p> <span class="font-semibold text-dark-brown-custom text-sm">- Sarah K.</span> 
+    </div> 
+    <div class="flex-shrink-0 w-[350px] bg-white p-6 rounded-lg shadow-md text-center snap-start border-white border-[5px] shadow-lg relative pb-10 after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-8 after:bg-white after:rounded-b-lg"> 
+     <div class="w-20 h-20 bg-gray-300 rounded-full mx-auto mb-4 bg-[url('placeholder-avatar.png')] bg-cover bg-center"></div> 
+     <p class="italic text-gray-700 text-base mb-4">"Cokelat medenya juara! Pengiriman cepat dan packaging-nya premium banget. Bakal repeat order!"</p> <span class="font-semibold text-dark-brown-custom text-sm">- Budi A.</span> 
+    </div> 
+    <div class="flex-shrink-0 w-[350px] bg-white p-6 rounded-lg shadow-md text-center snap-start border-white border-[5px] shadow-lg relative pb-10 after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-8 after:bg-white after:rounded-b-lg"> 
+     <div class="w-20 h-20 bg-gray-300 rounded-full mx-auto mb-4 bg-[url('placeholder-avatar.png')] bg-cover bg-center"></div> 
+     <p class="italic text-gray-700 text-base mb-4">"Setiap gigitan lidah kucingnya bikin nostalgia masa kecil. Ini bukan cuma kue, tapi mesin waktu!"</p> <span class="font-semibold text-dark-brown-custom text-sm">- Dewi R.</span> 
+    </div> 
+   </div> 
+  </section> 
+  <section class="py-20 px-5% bg-dark-brown-custom text-white text-center mb-10"> 
+   <div class="max-w-screen-lg mx-auto"> <span class="inline-block bg-subtle-gold-custom text-white py-2 px-4 rounded-full font-bold uppercase text-sm tracking-wide mb-5 shadow-md">Seasonal Only!</span> 
+    <h2 class="text-4xl md:text-5xl font-serif text-white mb-6">Jangan Sampai Kehabisan Kehangatan Ini.</h2> 
+    <p class="text-lg text-beige-custom mb-10">Setiap batch Nasthara dibuat terbatas untuk menjaga kualitas dan rasa otentik. Pastikan Anda mendapatkan bagian dari kehangatan ini sebelum Lebaran usai.</p> 
+    <div class="flex flex-wrap justify-center gap-4 mt-8"> <a href="https://wa.me/6282233676703" class="inline-block bg-subtle-gold-custom text-white py-4 px-8 rounded-full font-semibold uppercase tracking-wide transition-colors duration-300 hover:bg-light-brown-custom shadow-xl" target="_blank">Order Before It’s Gone</a> <a href="https://shopee.co.id/nasthar_a" class="inline-block bg-shopee-orange text-white py-4 px-8 rounded-full font-semibold uppercase tracking-wide transition-colors duration-300 hover:brightness-90 shadow-xl" target="_blank">Belanja di Shopee</a> 
+    </div> 
+   </div> 
+  </section> 
+  <footer class="bg-dark-brown-custom text-beige-custom py-8 px-5% text-center"> 
+   <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8"> 
+    <div class="flex-1 text-center md:text-left"> 
+     <img src="image/nasthara.png" alt="Nasthara Logo" class="h-28 mb-2 mx-auto md:mx-0"> 
+     <p class="font-handwritten text-xl text-beige-custom mt-2">“Because every home has a taste. And that taste is Nasthara.”</p> 
+    </div> 
+    <div class="flex-1 text-center md:text-left"> 
+     <h3 class="text-xl md:text-2xl font-serif text-white mb-4">Connect With Us</h3> <a href="https://wa.me/6282233676703" target="_blank" class="block text-beige-custom mb-2 hover:text-subtle-gold-custom">WhatsApp</a> <a href="https://instagram.com/nasthar_a" target="_blank" class="block text-beige-custom mb-2 hover:text-subtle-gold-custom">Instagram</a> <a href="https://shopee.co.id/nasthar_a" target="_blank" class="block text-beige-custom mb-2 hover:text-subtle-gold-custom">Shopee</a> 
+    </div> 
+    <div class="flex-1 text-center md:text-right text-sm text-gray-400"> 
+     <p class="mb-1">Since 2022, Made by Order (PO)</p> 
+     <p class="mb-1">Handmade in Indonesia — from our kitchen to your heart.</p> 
+     <p>© 2025 Nasthara. All rights reserved.</p> 
+    </div> 
+   </div> 
+  </footer> 
+  <script src="script.js"></script> 
+ 
+</body></html>
