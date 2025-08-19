@@ -1,0 +1,668 @@
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aoklandz - Brevet Pajak Millennials &amp; Gen Z</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .testimonial-slider {
+            scroll-behavior: smooth;
+        }
+        
+        .btn-pulse:hover {
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-purple-50 font-sans">
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/6281218347894" class="fixed bottom-8 right-8 bg-green-500 text-white p-4 rounded-full shadow-lg z-50 hover:bg-green-600 transition duration-300">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <!-- Header with Hero Section -->
+    <header class="relative overflow-hidden">
+        <div class="absolute inset-0 bg-blue-600 opacity-90"></div>
+        <div class="relative z-10 container mx-auto px-6 py-20 text-center">
+            <div class="max-w-4xl mx-auto">
+                <img src="https://placehold.co/200x100" alt="Logo Aoklandz dengan desain modern berwarna putih dengan aksen biru muda" class="mx-auto h-20 mb-6">
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Brevet Pajak Millennials &amp; Gen Z</h1>
+                <p class="text-xl text-blue-100 mb-8">Akuntansi Otak Kanan - Fun, Mudah, dan Menggugah</p>
+                
+                <div class="flex flex-col sm:flex-row justify-center gap-4 mb-12">
+                    <a href="#daftar" class="bg-white text-blue-600 py-3 px-8 rounded-full font-semibold hover:bg-blue-50 transition duration-300 btn-pulse">
+                        DAFTAR SEKARANG
+                    </a>
+                    <a href="#keunggulan" class="bg-transparent border-2 border-white text-white py-3 px-8 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition duration-300">
+                        LIHAT KEUNGGULAN
+                    </a>
+                </div>
+                
+                <div class="floating hidden md:block">
+                    <img src="https://placehold.co/600x400" alt="Ilustrasi sekelompok mahasiswa millennials sedang belajar akuntansi dengan metode otak kanan, terlihat menyenangkan dan interaktif" class="mx-auto rounded-lg shadow-xl">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Stats Section -->
+    <section class="bg-white py-12 shadow-sm">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="p-6">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">1.700+</div>
+                    <div class="text-gray-600">Alumni Sejak 2018</div>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">13+</div>
+                    <div class="text-gray-600">Tahun Pengalaman</div>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">100%</div>
+                    <div class="text-gray-600">Update Peraturan</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Keunggulan Section -->
+    <section id="keunggulan" class="py-16 bg-gradient-to-b from-white to-blue-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-blue-800 mb-4">Kenapa Memilih Aoklandz?</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Brevet Pajak pertama di Indonesia yang dikhususkan untuk Millennials &amp; Gen Z dengan metode pembelajaran otak kanan yang fun dan mudah dipahami</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Keunggulan 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-md transition duration-300 card-hover">
+                    <div class="text-blue-500 text-4xl mb-4">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Bonus Training Soft Skills</h3>
+                    <p class="text-gray-600">Senilai Rp1.500.000 untuk meningkatkan kemampuan komunikasi dan presentasi Anda</p>
+                </div>
+                
+                <!-- Keunggulan 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-md transition duration-300 card-hover">
+                    <div class="text-blue-500 text-4xl mb-4">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Premium Gathering</h3>
+                    <p class="text-gray-600">Senilai Rp350.000 untuk networking dengan profesional dan alumni</p>
+                </div>
+                
+                <!-- Keunggulan 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-md transition duration-300 card-hover">
+                    <div class="text-blue-500 text-4xl mb-4">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Metode Otak Kanan</h3>
+                    <p class="text-gray-600">Teknik Story Telling &amp; Visualization membuat kelas fun &amp; mudah dipahami</p>
+                </div>
+                
+                <!-- Keunggulan 4 -->
+                <div class="bg-white p-8 rounded-xl shadow-md transition duration-300 card-hover">
+                    <div class="text-blue-500 text-4xl mb-4">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Update Seumur Hidup</h3>
+                    <p class="text-gray-600">Akses update peraturan perpajakan tanpa batas waktu</p>
+                </div>
+                
+                <!-- Keunggulan 5 -->
+                <div class="bg-white p-8 rounded-xl shadow-md transition duration-300 card-hover">
+                    <div class="text-blue-500 text-4xl mb-4">
+                        <i class="fas fa-redo"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Pengulangan Materi</h3>
+                    <p class="text-gray-600">Bonus pengulangan materi aplikasi perpajakan</p>
+                </div>
+                
+                <!-- Keunggulan 6 -->
+                <div class="bg-white p-8 rounded-xl shadow-md transition duration-300 card-hover">
+                    <div class="text-blue-500 text-4xl mb-4">
+                        <i class="fas fa-laugh-beam"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Kelas Fun &amp; Memotivasi</h3>
+                    <p class="text-gray-600">Suasana belajar yang menggugah semangat dan kreativitas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metode Pembelajaran Section -->
+    <section class="py-16 bg-blue-600 text-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-10">
+                    <h2 class="text-3xl font-bold mb-6">Metode Pembelajaran Otak Kanan</h2>
+                    <p class="mb-6">Kami menghadirkan pendekatan revolusioner dalam belajar akuntansi dan perpajakan dengan mengoptimalkan otak kanan Anda:</p>
+                    
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-200 mt-1 mr-3"></i>
+                            <span>Teknik Story Telling - Materi disampaikan dalam bentuk cerita yang mudah diingat</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-200 mt-1 mr-3"></i>
+                            <span>Visualisasi Kreatif - Mengubah angka menjadi gambar dan diagram yang menarik</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-200 mt-1 mr-3"></i>
+                            <span>Games &amp; Simulasi - Belajar sambil bermain dengan case study nyata</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-200 mt-1 mr-3"></i>
+                            <span>Mind Mapping - Teknik mencatat kreatif untuk mengorganisir informasi</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <img src="https://placehold.co/600x400" alt="Ilustrasi metode pembelajaran otak kanan dengan diagram mind mapping warna-warni yang menunjukkan konsep akuntansi" class="rounded-lg shadow-xl w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-blue-800 mb-12">Apa Kata Alumni Kami?</h2>
+            
+            <div class="relative">
+                <div class="testimonial-slider flex overflow-x-auto pb-10 scrollbar-hide">
+                    <!-- Testimonial 1 -->
+                    <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                        <div class="bg-blue-50 p-8 rounded-xl h-full">
+                            <div class="flex items-center mb-4">
+                                <img src="https://placehold.co/80x80" alt="Foto alumni muda tersenyum" class="w-12 h-12 rounded-full mr-4">
+                                <div>
+                                    <h4 class="font-semibold">Budi Santoso</h4>
+                                    <p class="text-blue-600 text-sm">Alumni 2021</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-700 italic">"Metode otak kanan beneran beda! Dulu aku paling takut sama angka, sekarang malah ketagihan belajar pajak. Gurunya asik banget ngajarnya pake cerita dan gambar."</p>
+                            <div class="mt-4 text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 2 -->
+                    <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                        <div class="bg-blue-50 p-8 rounded-xl h-full">
+                            <div class="flex items-center mb-4">
+                                <img src="https://placehold.co/80x80" alt="Foto wanita profesional dengan latar kantor" class="w-12 h-12 rounded-full mr-4">
+                                <div>
+                                    <h4 class="font-semibold">Dewi Anggraeni</h4>
+                                    <p class="text-blue-600 text-sm">Alumni 2020</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-700 italic">"Setelah ikut Aoklandz, aku langsung bisa praktik di kantor. Materinya update banget dan diajarin sampai bisa. Sekarang aku jadi konsultan pajak di perusahaan multinasional."</p>
+                            <div class="mt-4 text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 3 -->
+                    <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                        <div class="bg-blue-50 p-8 rounded-xl h-full">
+                            <div class="flex items-center mb-4">
+                                <img src="https://placehold.co/80x80" alt="Foto pria muda dengan kacamata tersenyum" class="w-12 h-12 rounded-full mr-4">
+                                <div>
+                                    <h4 class="font-semibold">Rizky Pratama</h4>
+                                    <p class="text-blue-600 text-sm">Alumni 2022</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-700 italic">"Gak nyangka belajar pajak bisa seseru ini! Konsep yang rumit jadi gampang dimengerti berkat teknik visualisasi. Sekarang malah sering diminta jelasin ke temen-temen kantor."</p>
+                            <div class="mt-4 text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-16 bg-blue-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-blue-800 mb-4">Investasi Masa Depan Anda</h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">Kami menawarkan sistem pembayaran fleksibel untuk kenyamanan Anda</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Paket 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="bg-blue-500 text-white py-4 px-6">
+                        <h3 class="text-xl font-semibold">Brevet Pajak A</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-3xl font-bold text-blue-600 mb-4">Rp 3.500.000</div>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>12x Pertemuan</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Materi Dasar Perpajakan</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Bonus Soft Skills Training</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Sertifikat Resmi</span>
+                            </li>
+                        </ul>
+                        <a href="#daftar" class="block text-center bg-blue-600 text-white py-2 px-6 rounded-full hover:bg-blue-700 transition duration-300">
+                            Daftar Sekarang
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Paket 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform scale-105">
+                    <div class="bg-purple-600 text-white py-4 px-6">
+                        <h3 class="text-xl font-semibold">Brevet Pajak B</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-3xl font-bold text-purple-600 mb-4">Rp 4.500.000</div>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>12x Pertemuan</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Materi Lanjutan Perpajakan</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Bonus Premium Gathering</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Sertifikat Resmi</span>
+                            </li>
+                        </ul>
+                        <a href="#daftar" class="block text-center bg-purple-600 text-white py-2 px-6 rounded-full hover:bg-purple-700 transition duration-300">
+                            Daftar Sekarang
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Paket 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="bg-blue-500 text-white py-4 px-6">
+                        <h3 class="text-xl font-semibold">Paket A+B</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-3xl font-bold text-blue-600 mb-4">Rp 7.000.000</div>
+                        <div class="text-sm text-red-500 mb-2">Hemat Rp 1.000.000</div>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>24x Pertemuan</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Materi Lengkap A+B</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Semua Bonus Termasuk</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Sertifikat Resmi</span>
+                            </li>
+                        </ul>
+                        <a href="#daftar" class="block text-center bg-blue-600 text-white py-2 px-6 rounded-full hover:bg-blue-700 transition duration-300">
+                            Daftar Sekarang
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-8 text-gray-600">
+                <p>Tersedia pilihan cicilan hingga 12x tanpa bunga. Hubungi kami untuk info lebih lanjut.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Pengajar Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-blue-800 mb-12">Pengajar Berpengalaman</h2>
+            
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/3 mb-10 lg:mb-0">
+                    <img src="https://placehold.co/400x500" alt="Foto pengajar profesional Aoklandz dengan latar belakang buku dan sertifikat" class="rounded-lg shadow-xl w-full">
+                </div>
+                
+                <div class="lg:w-2/3 lg:pl-12">
+                    <h3 class="text-2xl font-semibold mb-4">Konsultan Pajak Bersertifikat</h3>
+                    <p class="mb-6 text-gray-700">Tim pengajar kami terdiri dari profesional dengan pengalaman lebih dari 13 tahun di bidang perpajakan dan telah aktif mengajar lebih dari 7 tahun. Semua pengajar adalah anggota resmi IKPI (Ikatan Konsultan Pajak Indonesia) dan beberapa merupakan mantan pegawai Direktorat Jenderal Pajak.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 text-blue-600 rounded-full p-3 mr-4">
+                                <i class="fas fa-award text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Sertifikasi Resmi</h4>
+                                <p class="text-gray-600 text-sm">Anggota aktif IKPI dengan lisensi konsultan pajak</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 text-blue-600 rounded-full p-3 mr-4">
+                                <i class="fas fa-chalkboard-teacher text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Pengalaman Mengajar</h4>
+                                <p class="text-gray-600 text-sm">Lebih dari 7 tahun mengajar dengan metode otak kanan</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 text-blue-600 rounded-full p-3 mr-4">
+                                <i class="fas fa-briefcase text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Pengalaman Praktis</h4>
+                                <p class="text-gray-600 text-sm">Pernah bekerja di DJP dan perusahaan multinasional</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 text-blue-600 rounded-full p-3 mr-4">
+                                <i class="fas fa-graduation-cap text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Pendidikan</h4>
+                                <p class="text-gray-600 text-sm">Lulusan S2 Perpajakan dari universitas ternama</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Form Pendaftaran Section -->
+    <section id="daftar" class="py-16 bg-blue-600 text-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-xl overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 bg-blue-500 p-10 flex items-center">
+                        <div>
+                            <h2 class="text-3xl font-bold mb-4">Daftar Sekarang!</h2>
+                            <p class="mb-6">Isi formulir berikut untuk bergabung dengan Aoklandz dan mulai perjalanan Anda menjadi ahli pajak.</p>
+                            
+                            <div class="space-y-3">
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-blue-200 mt-1 mr-3"></i>
+                                    <span>Kelas terbatas hanya 20 peserta per angkatan</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-blue-200 mt-1 mr-3"></i>
+                                    <span>Pembayaran bisa dicicil tanpa bunga</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-blue-200 mt-1 mr-3"></i>
+                                    <span>Garansi uang kembali jika tidak puas</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/2 p-10 text-gray-800">
+                        <form>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 mb-2" for="nama">Nama Lengkap</label>
+                                <input type="text" id="nama" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="block text-gray-700 mb-2" for="email">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="block text-gray-700 mb-2" for="wa">Nomor WhatsApp</label>
+                                <input type="tel" id="wa" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="block text-gray-700 mb-2" for="paket">Pilih Paket</label>
+                                <select id="paket" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <option value="">-- Pilih Paket --</option>
+                                    <option value="A">Brevet Pajak A - Rp 3.500.000</option>
+                                    <option value="B">Brevet Pajak B - Rp 4.500.000</option>
+                                    <option value="A+B">Paket A+B - Rp 7.000.000</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label class="block text-gray-700 mb-2" for="metode">Metode Pembayaran</label>
+                                <select id="metode" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <option value="">-- Pilih Metode --</option>
+                                    <option value="lunas">Lunas</option>
+                                    <option value="cicil">Cicilan (3x, 6x, atau 12x)</option>
+                                </select>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300 font-semibold">
+                                KIRIM PENDAFTARAN
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-3xl font-bold text-center text-blue-800 mb-12">Pertanyaan yang Sering Diajukan</h2>
+            
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-toggle w-full flex justify-between items-center p-4 bg-blue-50 hover:bg-blue-100 transition duration-300">
+                        <span class="font-semibold text-left">Apa itu metode pembelajaran otak kanan?</span>
+                        <i class="fas fa-chevron-down transition duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden p-4 border-t border-gray-200">
+                        <p>Metode otak kanan adalah pendekatan pembelajaran yang mengoptimalkan fungsi otak kanan (kreativitas, imajinasi, visualisasi) untuk memahami konsep akuntansi dan perpajakan. Kami menggunakan teknik story telling, mind mapping, games, dan visualisasi kreatif untuk membuat materi yang rumit menjadi mudah dipahami dan menyenangkan.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 2 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-toggle w-full flex justify-between items-center p-4 bg-blue-50 hover:bg-blue-100 transition duration-300">
+                        <span class="font-semibold text-left">Apakah sertifikat dari Aoklandz diakui?</span>
+                        <i class="fas fa-chevron-down transition duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden p-4 border-t border-gray-200">
+                        <p>Ya, Aoklandz adalah Lembaga Kursus dan Pelatihan (LKP) yang memiliki izin resmi dari Dinas Pendidikan. Sertifikat kami diakui di lingkungan Pengadilan Pajak dan Kantor Pajak. Banyak alumni kami yang menggunakan sertifikat ini untuk melamar kerja atau meningkatkan karir di bidang perpajakan.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 3 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-toggle w-full flex justify-between items-center p-4 bg-blue-50 hover:bg-blue-100 transition duration-300">
+                        <span class="font-semibold text-left">Bagaimana sistem cicilannya?</span>
+                        <i class="fas fa-chevron-down transition duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden p-4 border-t border-gray-200">
+                        <p>Kami menyediakan pilihan cicilan hingga 12x tanpa bunga. Pembayaran pertama minimal 30% dari total biaya kursus, kemudian dilanjutkan dengan angsuran bulanan. Semua pembayaran dilakukan melalui transfer bank dan akan kami berikan bukti pembayaran resmi.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 4 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-toggle w-full flex justify-between items-center p-4 bg-blue-50 hover:bg-blue-100 transition duration-300">
+                        <span class="font-semibold text-left">Apakah ada jaminan bisa mengerti materi?</span>
+                        <i class="fas fa-chevron-down transition duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden p-4 border-t border-gray-200">
+                        <p>Kami memberikan garansi 100% uang kembali jika setelah 3 pertemuan pertama Anda merasa tidak cocok dengan metode pengajaran kami. Selain itu, kami juga menyediakan sesi konsultasi tambahan gratis bagi peserta yang membutuhkan penjelasan lebih lanjut.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-blue-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Aoklandz</h3>
+                    <p class="text-blue-200">Brevet Pajak Millennials &amp; Gen Z pertama di Indonesia dengan metode pembelajaran otak kanan.</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Kontak Kami</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-blue-300"></i>
+                            <a href="https://maps.app.goo.gl/cugJrJDTyEvj8uuN9" target="_blank" class="hover:underline">
+                                Ruko Villa Permata Blok C1 No. 10<br>
+                                Lippo Karawaci, Binong, Kec. Curug<br>
+                                Kabupaten Tangerang, Banten 15810
+                            </a>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fab fa-whatsapp mt-1 mr-3 text-blue-300"></i>
+                            <a href="https://wa.me/6281218347894" target="_blank" class="hover:underline">+62 812-1834-7894</a>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-3 text-blue-300"></i>
+                            <span>info@aoklandz.com</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Program</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-blue-200 hover:text-white transition duration-300">Brevet Pajak A</a></li>
+                        <li><a href="#" class="text-blue-200 hover:text-white transition duration-300">Brevet Pajak B</a></li>
+                        <li><a href="#" class="text-blue-200 hover:text-white transition duration-300">Paket A+B</a></li>
+                        <li><a href="#" class="text-blue-200 hover:text-white transition duration-300">Kelas Online</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Sosial Media</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/aoklandz?igsh=MTFvd3lqdWF1dXBvcQ==" target="_blank" class="bg-blue-700 text-white p-3 rounded-full hover:bg-blue-600 transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/share/1FKGR4jarz/" target="_blank" class="bg-blue-700 text-white p-3 rounded-full hover:bg-blue-600 transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://wa.me/6281218347894" target="_blank" class="bg-blue-700 text-white p-3 rounded-full hover:bg-blue-600 transition duration-300">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <img src="https://placehold.co/150x50" alt="Logo resmi IKPI (Ikatan Konsultan Pajak Indonesia)" class="h-10">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-blue-700 mt-8 pt-8 text-center text-blue-300">
+                <p>© 2023 Aoklandz - Akuntansi Otak Kanan. Semua Hak Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // FAQ Toggle
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                
+                content.classList.toggle('hidden');
+                icon.classList.toggle('fa-chevron-down');
+                icon.classList.toggle('fa-chevron-up');
+            });
+        });
+        
+        // Testimonial Slider Navigation
+        let currentTestimonial = 0;
+        const testimonials = document.querySelectorAll('.testimonial-slider > div');
+        
+        function showTestimonial(index) {
+            testimonials.forEach((testimonial, i) => {
+                testimonial.style.display = i === index ? 'block' : 'none';
+            });
+        }
+        
+        // Auto slide testimonials
+        setInterval(() => {
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            showTestimonial(currentTestimonial);
+        }, 5000);
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body></html>
